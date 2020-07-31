@@ -20,6 +20,9 @@ public class LocalHostRouteConfig {
                 .route(r -> r.path("/users/**")
                         .uri("lb://carshare-usersservice")
                         .id("users-service"))
+                .route(r -> r.path("/login")
+                        .uri("lb://carshare-usersservice")
+                        .id("users-login"))
                 .build();
     }
 }
